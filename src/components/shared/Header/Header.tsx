@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 
 import Button from "components/shared/Button";
+import { BASE_URL } from "utils/constants";
 
 import * as S from "./styles";
 import { NAVIGATION_LINKS } from "./constants";
@@ -29,7 +30,7 @@ const Header: FC<Props> = ({ headerBg }) => {
     <S.Wrapper withBG={withBG}>
       <S.StyledContainer>
         <S.Logo
-          src={`/images/logo${!withBG ? "-simple" : ""}.svg`}
+          src={`${BASE_URL}/images/logo${!withBG ? "-simple" : ""}.svg`}
           onClick={() => push("/")}
         />
         <S.Navigation>

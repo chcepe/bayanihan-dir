@@ -22,7 +22,9 @@ const PantryList: FC = () => {
     filter === "all"
       ? pantries
       : pantries.filter((pantry) => favorites.includes(pantry.id));
-  visiblePantries = search ? searchPantry(pantries, search) : visiblePantries;
+  visiblePantries = search
+    ? searchPantry(visiblePantries, search)
+    : visiblePantries;
   const totalPantries = visiblePantries.length;
   const pantriesList = visiblePantries.slice(0, page);
 

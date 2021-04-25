@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { GOOGLE_SHEET_FILE } from "utils/constants";
+import { GOOGLE_SHEET_FILE, BASE_URL } from "utils/constants";
 import { ShWave } from "assets/shapes";
 import SuggestionsSearch from "containers/SuggestionsSearch";
 
@@ -17,7 +17,7 @@ const Hero: FC = () => {
             <p>
               Data is live from{" "}
               <a target="_blank" href={GOOGLE_SHEET_FILE}>
-                <img src="/images/google-sheet.svg" />
+                <img src={`${BASE_URL}/images/google-sheet.svg`} />
               </a>
               .
             </p>
@@ -25,7 +25,12 @@ const Hero: FC = () => {
         </S.StyledContainer>
         <ShWave className="wave" />
       </S.Content>
-      <S.BackgroundVideo loop autoPlay muted src="/videos/bayanihan.mp4" />
+      <S.BackgroundVideo
+        loop
+        autoPlay
+        muted
+        src={`${BASE_URL}/videos/bayanihan.mp4`}
+      />
     </S.Wrapper>
   );
 };

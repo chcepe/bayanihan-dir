@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 
 import Section from "components/shared/Section";
 import Button from "components/shared/Button";
+import { BASE_URL } from "utils/constants";
 
 import * as S from "./styles";
 
@@ -49,7 +50,7 @@ const AboutSection: FC = () => {
             icon="AiOutlineAim"
           />
         </div>
-        <img src="/images/giving.svg" />
+        <img src={`${BASE_URL}/images/giving.svg`} />
       </S.Grid>
     </Section>
   );
