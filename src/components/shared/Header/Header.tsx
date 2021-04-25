@@ -6,10 +6,14 @@ import Button from "components/shared/Button";
 import * as S from "./styles";
 import { NAVIGATION_LINKS } from "./constants";
 
-const Header: FC = () => {
+interface Props {
+  headerBg?: boolean;
+}
+
+const Header: FC<Props> = ({ headerBg }) => {
   const { push } = useHistory();
   const [scrollTop, setScrollTop] = useState(0);
-  const withBG = scrollTop > 70;
+  const withBG = headerBg || scrollTop > 70;
 
   useEffect(() => {
     const onScroll = () => {
@@ -37,6 +41,7 @@ const Header: FC = () => {
             ))}
           </S.Links>
           <Button
+            onClick={() => push("/add-pantry")}
             color="white"
             cta="bordered"
             icon="AiFillHeart"

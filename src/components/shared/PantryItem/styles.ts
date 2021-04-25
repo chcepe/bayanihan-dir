@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { IoHeartSharp, IoLocationSharp } from "react-icons/io5";
 import { color, margin, padding } from "theme";
+import { rgba } from "polished";
 
 import AspectRatio from "components/shared/AspectRatio";
 
@@ -47,18 +48,21 @@ export const IcLocation = styled(IoLocationSharp)`
   height: 20px;
 `;
 
-export const IcHeart = styled(IoHeartSharp)`
+export const IcHeart = styled(IoHeartSharp)<{ active?: boolean }>(
+  ({ active }) => `
   width: 30px;
   height: 30px;
   fill: none;
   stroke-width: 50px;
   stroke: ${color.white};
   transition: all 0.2s ease;
+  ${active ? `fill: ${color.white};` : ""}
 
   &:hover {
-    fill: ${color.white};
+    fill: ${rgba(active ? color.black : color.white, 0.6)};
   }
-`;
+`
+);
 
 export const Wrapper = styled.div`
   background: ${color.white};

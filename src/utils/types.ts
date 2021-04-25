@@ -11,7 +11,10 @@ export interface Pantry {
   sched: string;
   province: string;
   region: string;
-  contact: string;
+  contact: {
+    name: string;
+    phone: string;
+  };
   barangay: string;
   street: string;
   city: string;

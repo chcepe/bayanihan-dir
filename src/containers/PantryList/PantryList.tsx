@@ -10,12 +10,19 @@ import { searchPantry } from "utils/functions";
 
 import * as S from "./styles";
 
+type Filter = "all" | "favorites";
+
 const PantryList: FC = () => {
-  const { pantries, loadingPantries } = useContext(AppContext);
+  const { pantries, loadingPantries, favorites } = useContext(AppContext);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(PANTRIES_PER_PAGE);
+  const [filter, setFilter] = useState<Filter>("all");
 
-  const visiblePantries = search ? searchPantry(pantries, search) : pantries;
+  let visiblePantries =
+    filter === "all"
+      ? pantries
+      : pantries.filter((pantry) => favorites.includes(pantry.id));
+  visiblePantries = search ? searchPantry(pantries, search) : visiblePantries;
   const totalPantries = visiblePantries.length;
   const pantriesList = visiblePantries.slice(0, page);
 
@@ -26,9 +33,23 @@ const PantryList: FC = () => {
       ) : (
         <>
           <S.Header>
-            <h2>Community Pantry ({pantries.length})</h2>
+            <h2>Community Pantries ({pantries.length})</h2>
             <SearchBar onChange={(e) => setSearch(e.target.value)} />
           </S.Header>
+          <S.Filters>
+            <S.FilterItem
+              onClick={() => setFilter("all")}
+              active={filter === "all"}
+            >
+              All
+            </S.FilterItem>
+            <S.FilterItem
+              onClick={() => setFilter("favorites")}
+              active={filter === "favorites"}
+            >
+              Favorites
+            </S.FilterItem>
+          </S.Filters>
           {totalPantries > 0 ? (
             <>
               <S.List>
@@ -40,7 +61,6 @@ const PantryList: FC = () => {
                 <S.Actions>
                   <Button
                     iconPos="right"
-                    icon="AiOutlineDoubleRight"
                     text="Show more"
                     onClick={() => setPage(page + PANTRIES_PER_PAGE)}
                   />

@@ -1,13 +1,13 @@
 import { darken, rgba } from "polished";
 import styled from "styled-components";
-import { breakpoint, color } from "theme";
+import { breakpoint, color, margin } from "theme";
 
 import Container from "components/shared/Container";
 
 export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 95vh;
 
   .wave {
     fill: #f4f5f7;
@@ -38,9 +38,19 @@ export const Form = styled.div`
   display: flex;
   flex-direction: column;
 
-  a,
-  h1,
-  small {
+  & > p {
+    margin-top: ${margin.lg};
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 30px;
+    }
+  }
+
+  & > a,
+  & > h1,
+  & > p {
     color: ${color.white};
   }
 

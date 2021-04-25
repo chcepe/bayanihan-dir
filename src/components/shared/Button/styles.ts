@@ -28,7 +28,7 @@ export const StyledButton = styled.button<Omit<Props, "text" | "icon">>(
     return `
   cursor: pointer;
   position: relative;
-  ${block ? `display: block; width: 100%;` : ""};
+  ${block ? `display: block; width: 100%;` : "width: fit-content;"};
   border-radius: 5px;
   font-weight: bold;
   display: flex;

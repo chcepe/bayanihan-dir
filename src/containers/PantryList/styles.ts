@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Loading from "components/shared/Loading";
 
-import { breakpoint, margin, padding } from "theme";
+import { breakpoint, color, margin, padding } from "theme";
+import { rgba } from "polished";
 
 export const List = styled.div`
   display: grid;
@@ -29,3 +30,23 @@ export const StyledLoading = styled(Loading)`
   margin: auto;
   display: block;
 `;
+
+export const Filters = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: ${margin.lg};
+`;
+
+export const FilterItem = styled.div<{ active?: boolean }>(
+  ({ active }) => `
+  width: 100%;
+  padding: ${padding.md};
+  text-align: center;
+  border-bottom: ${rgba(color.primary, active ? 1 : 0.1)} 3px solid;
+  cursor: pointer;
+
+  &:hover{
+    background: ${rgba(color.primary, 0.05)};
+  }
+`
+);

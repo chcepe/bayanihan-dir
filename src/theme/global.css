@@ -37,5 +37,9 @@ h2 {
 }
 
 .leaflet-container {
-  height: 600px;
+  height: 100%;
+}
+
+.leaflet-control-attribution.leaflet-control {
+  display: none;
 }

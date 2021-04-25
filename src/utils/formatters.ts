@@ -1,3 +1,4 @@
+import { hash } from "./functions";
 import { Pantry } from "./types";
 
 export const formatPantries = (data: any[]): Pantry[] => {
@@ -10,7 +11,7 @@ export const formatPantries = (data: any[]): Pantry[] => {
     const coords = d?.["gsx$coordinates"]?.["$t"] ?? "";
 
     return {
-      id: `${i}-${d?.["id"]?.["$t"]}`,
+      id: `${hash(`${i}-${d?.["id"]?.["$t"]}`)}`,
       name: d?.["gsx$pantryname"]?.["$t"] ?? "",
       desc: d?.["gsx$description"]?.["$t"] ?? "",
       loc: `${barangay} ${city} ${province}, ${region}`,
@@ -20,7 +21,10 @@ export const formatPantries = (data: any[]): Pantry[] => {
         lat: coords.split(",")?.[1] ?? "",
       },
       sched: d?.["gsx$schedule"]?.["$t"] ?? "",
-      contact: d?.["gsx$contact"]?.["$t"] ?? "",
+      contact: {
+        name: d?.["gsx$contact"]?.["$t"] ?? "",
+        phone: d?.["gsx$number"]?.["$t"] ?? "",
+      },
       city,
       street,
       region,

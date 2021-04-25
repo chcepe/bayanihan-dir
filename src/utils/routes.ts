@@ -1,5 +1,8 @@
 import Home from "pages/index";
+import PantryPage from "pages/pantry";
 import Map from "pages/map";
+import AddPantryPage from "pages/GoogleForm/AddPantry";
+import EditPantryPage from "pages/GoogleForm/EditPantry";
 
 const ROUTES = {
   HOME: {
@@ -14,8 +17,18 @@ const ROUTES = {
   },
   MAP_ID: {
     path: "/map/:id",
-    component: Map,
+    component: PantryPage,
     exact: false,
+  },
+  ADD_PANTRY: {
+    path: "/add-pantry",
+    component: AddPantryPage,
+    exact: true,
+  },
+  EDIT_PANTRY: {
+    path: "/edit-pantry",
+    component: EditPantryPage,
+    exact: true,
   },
 };
 

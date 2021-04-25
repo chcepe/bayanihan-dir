@@ -22,6 +22,29 @@ export const RecentSearches = styled.div`
   padding: ${padding.lg};
   flex-direction: column;
 
+  p {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: ${margin.md};
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    svg:hover {
+      opacity: 1;
+    }
+  }
+
+  button {
+    margin: 2px;
+  }
+
+  & > div {
+    flex-wrap: wrap;
+  }
+
   &,
   div {
     display: flex;

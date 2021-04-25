@@ -1,9 +1,9 @@
 import Layout from "components/shared/Layout";
-import Map from "containers/MapPage";
+import SinglePantry from "containers/SinglePantry";
 
 const MapPage = () => (
-  <Layout headerBg title="Map">
-    <Map />
+  <Layout headerBg title="Pantry">
+    <SinglePantry />
   </Layout>
 );
 

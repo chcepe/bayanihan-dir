@@ -13,14 +13,14 @@ const Hero: FC = () => {
         <S.StyledContainer>
           <S.Form>
             <h1>Looking for a community pantry near you to get involved in?</h1>
-            <small>
+            <SuggestionsSearch />
+            <p>
               Data is live from{" "}
               <a target="_blank" href={GOOGLE_SHEET_FILE}>
-                Google Sheets
+                <img src="/images/google-sheet.svg" />
               </a>
               .
-            </small>
-            <SuggestionsSearch />
+            </p>
           </S.Form>
         </S.StyledContainer>
         <ShWave className="wave" />
