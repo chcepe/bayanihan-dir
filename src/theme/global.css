@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f5f7;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+.leaflet-container {
+  height: 100%;
+}
+
+.leaflet-control-attribution.leaflet-control {
+  display: none;
+}
