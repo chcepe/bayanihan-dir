@@ -88,7 +88,9 @@ const SinglePantry: FC = () => {
       {
         id: "contact",
         icon: <AiFillPhone />,
-        value: `${contact.name} / ${contact.phone}`,
+        value: `${contact.name} ${contact.phone && contact.phone ? "/" : ""} ${
+          contact.phone
+        }`,
       },
     ];
 

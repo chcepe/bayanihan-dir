@@ -1,8 +1,10 @@
 import { Pantry } from "./types";
 
 export const searchPantry = (pantries: Pantry[], keyword: string) =>
-  pantries.filter((pantry) =>
-    JSON.stringify(pantry).toLocaleLowerCase().includes(keyword)
+  pantries.filter(
+    (pantry) =>
+      pantry.loc.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()) ||
+      pantry.name.toLocaleLowerCase().includes(keyword.toLocaleLowerCase())
   );
 
 export const hash = (str: string, seed = 0) => {

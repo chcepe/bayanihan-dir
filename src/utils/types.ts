@@ -19,3 +19,8 @@ export interface Pantry {
   street: string;
   city: string;
 }
+
+export interface Contributor {
+  name: string;
+  link?: string;
+}

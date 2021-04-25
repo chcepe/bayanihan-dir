@@ -44,6 +44,7 @@ const SuggestionsSearch: FC = () => {
         onChange={(e) => setSearch(e.target.value)}
         // onBlur={() => setShowSuggestions(false)}
         onFocus={() => setShowSuggestions(true)}
+        onClick={() => setShowSuggestions(true)}
         placeholder="Find community pantry nearby"
       />
       {showSuggestions && (

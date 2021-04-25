@@ -40,6 +40,8 @@ const color = {
   dark30: "#2e2e2e",
   grey91: "#e8e8e8",
   link: "#2a9df4",
+  fb: "#3b5998",
+  tw: "#00acee",
 };
 
 export interface THEME_TYPES {
