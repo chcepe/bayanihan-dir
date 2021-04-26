@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bayanihan-dir/static/css/main.2c04d191.chunk.css",
-    "main.js": "/bayanihan-dir/static/js/main.4eb68cea.chunk.js",
+    "main.js": "/bayanihan-dir/static/js/main.f278f203.chunk.js",
     "runtime-main.js": "/bayanihan-dir/static/js/runtime-main.7822eaf2.js",
     "static/css/2.497d84ea.chunk.css": "/bayanihan-dir/static/css/2.497d84ea.chunk.css",
     "static/js/2.909b1450.chunk.js": "/bayanihan-dir/static/js/2.909b1450.chunk.js",
@@ -13,6 +13,6 @@
     "static/css/2.497d84ea.chunk.css",
     "static/js/2.909b1450.chunk.js",
     "static/css/main.2c04d191.chunk.css",
-    "static/js/main.4eb68cea.chunk.js"
+    "static/js/main.f278f203.chunk.js"
   ]
 }
