@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/bayanihan-dir/static/css/main.2c04d191.chunk.css",
-    "main.js": "/bayanihan-dir/static/js/main.5ac328fc.chunk.js",
+    "main.css": "/bayanihan-dir/static/css/main.0007634c.chunk.css",
+    "main.js": "/bayanihan-dir/static/js/main.b0ef5aa1.chunk.js",
     "runtime-main.js": "/bayanihan-dir/static/js/runtime-main.7822eaf2.js",
     "static/css/2.4a95b25e.chunk.css": "/bayanihan-dir/static/css/2.4a95b25e.chunk.css",
-    "static/js/2.038f883b.chunk.js": "/bayanihan-dir/static/js/2.038f883b.chunk.js",
+    "static/js/2.e0776dfa.chunk.js": "/bayanihan-dir/static/js/2.e0776dfa.chunk.js",
     "index.html": "/bayanihan-dir/index.html",
-    "static/js/2.038f883b.chunk.js.LICENSE.txt": "/bayanihan-dir/static/js/2.038f883b.chunk.js.LICENSE.txt"
+    "static/js/2.e0776dfa.chunk.js.LICENSE.txt": "/bayanihan-dir/static/js/2.e0776dfa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7822eaf2.js",
     "static/css/2.4a95b25e.chunk.css",
-    "static/js/2.038f883b.chunk.js",
-    "static/css/main.2c04d191.chunk.css",
-    "static/js/main.5ac328fc.chunk.js"
+    "static/js/2.e0776dfa.chunk.js",
+    "static/css/main.0007634c.chunk.css",
+    "static/js/main.b0ef5aa1.chunk.js"
   ]
 }
