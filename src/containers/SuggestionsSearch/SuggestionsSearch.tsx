@@ -26,13 +26,9 @@ const SuggestionsSearch: FC = () => {
 
   useOnClickOutside(ref, () => setShowSuggestions(false));
 
-  const searchHistory = recentSearches.map((recentId) => {
-    const pantryItem = pantries.find((pantry) => pantry.id === recentId);
-    return {
-      id: recentId,
-      name: pantryItem?.name ?? "",
-    };
-  });
+  const searchHistory = pantries.filter((pantry) =>
+    recentSearches.includes(pantry.id)
+  );
 
   const showSuggestionsList = search.length > 0;
   const showRecentSearches = searchHistory.length > 0 && !showSuggestionsList;
@@ -56,16 +52,19 @@ const SuggestionsSearch: FC = () => {
                 <AiFillCloseCircle onClick={() => clearRecentSearches()} />
               </p>
               <div>
-                {searchHistory.map(({ name, id }) => (
-                  <Button
-                    marginR="sm"
-                    size="sm"
-                    text={name}
-                    key={id}
-                    icon="AiOutlineSearch"
-                    onClick={() => push(`/map/${id}`)}
-                  />
-                ))}
+                {searchHistory.map(({ name, id }) => {
+                  if (!name) return;
+                  return (
+                    <Button
+                      marginR="sm"
+                      size="sm"
+                      text={name}
+                      key={id}
+                      icon="AiOutlineSearch"
+                      onClick={() => push(`/map/${id}`)}
+                    />
+                  );
+                })}
               </div>
             </S.RecentSearches>
           )}

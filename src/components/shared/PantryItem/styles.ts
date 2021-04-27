@@ -32,6 +32,14 @@ export const Hover = styled.div`
   opacity: 0;
   transition: all 0.2s ease;
   padding: ${padding.md};
+  position: relative;
+
+  & > div {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    transform: scale(0.6);
+  }
 `;
 
 export const Location = styled.div`

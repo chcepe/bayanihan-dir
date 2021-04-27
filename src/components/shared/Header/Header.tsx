@@ -46,7 +46,7 @@ const Header: FC<Props> = ({ headerBg }) => {
             color="white"
             cta="bordered"
             icon="AiFillHeart"
-            text="Add community pantry"
+            text="Add pantry"
           />
         </S.Navigation>
       </S.StyledContainer>

@@ -19,6 +19,7 @@ const padding = {
   md: "12px",
   lg: "18px",
   xl: "35px",
+  xxl: "55px",
 };
 
 const margin = {

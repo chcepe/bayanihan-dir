@@ -25,12 +25,16 @@ const Hero: FC = () => {
         </S.StyledContainer>
         <ShWave className="wave" />
       </S.Content>
-      <S.BackgroundVideo
-        loop
-        autoPlay
-        muted
-        src={`${BASE_URL}/videos/bayanihan.mp4`}
-      />
+      <S.BackgroundVideo loop autoPlay muted>
+        <source
+          src={`${BASE_URL}/videos/bayanihan.mp4`}
+          type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+        />
+        <img
+          src={`${BASE_URL}/images/video-cover-fallback.jpg`}
+          title="Your browser does not support the <video> tag"
+        ></img>
+      </S.BackgroundVideo>
     </S.Wrapper>
   );
 };

@@ -2,15 +2,19 @@ import Leaflet from "leaflet";
 
 export const APP_NAME = "Bayanihandir";
 
+export const APP_URL = "http://chcepe.github.io";
+
 export const BASE_URL = "/bayanihan-dir";
+
+export const FB_APP_ID = "819534328916078";
 
 export const PANTRIES_PER_PAGE = 10;
 
 export const GOOGLE_SHEET_FILE =
-  "https://docs.google.com/spreadsheets/d/1fahZsfqpqeVyq5GBYtoUBUJ3ECjbjNDbcPcCIbg5IEg/edit#gid=0";
+  "https://docs.google.com/spreadsheets/d/1UWvCuuZWBLwaVDLfaPRJgolIVrOo-_tqHQQIBGexGek/edit";
 
 export const GOOGLE_SHEET =
-  "https://spreadsheets.google.com/feeds/list/1fahZsfqpqeVyq5GBYtoUBUJ3ECjbjNDbcPcCIbg5IEg/1/public/full?alt=json";
+  "https://spreadsheets.google.com/feeds/list/1UWvCuuZWBLwaVDLfaPRJgolIVrOo-_tqHQQIBGexGek/1/public/full?alt=json";
 
 export const ADD_PANTRY_FORM =
   "https://docs.google.com/forms/d/e/1FAIpQLScLkBDOsXdldlwGiUTabMhss9Lt79tn-1dNsHYCGwLfkebksg/viewform?embedded=true";

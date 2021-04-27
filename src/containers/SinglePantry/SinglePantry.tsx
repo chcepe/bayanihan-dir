@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React, { FC, useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
+import { FacebookProvider, Comments } from "react-facebook";
 import {
   MapContainer,
   TileLayer,
@@ -12,10 +13,17 @@ import { FaLocationArrow, FaStickyNote } from "react-icons/fa";
 import { AiFillCalendar, AiFillPhone } from "react-icons/ai";
 import { MdLocalGroceryStore } from "react-icons/md";
 
-import { LEAFLET_ICON, PHILIPPINES_LL } from "utils/constants";
+import {
+  APP_URL,
+  FB_APP_ID,
+  LEAFLET_ICON,
+  PHILIPPINES_LL,
+} from "utils/constants";
 import Container from "components/shared/Container";
 import { AppContext } from "lib/AppContext";
 import Button from "components/shared/Button";
+import Footer from "components/shared/Footer";
+import FavoriteBtn from "components/shared/FavoriteBtn";
 
 import * as S from "./styles";
 
@@ -105,7 +113,7 @@ const SinglePantry: FC = () => {
     ];
 
   return (
-    <S.Wrapper>
+    <>
       <div style={{ height: "50vh" }}>
         <MapContainer
           zoomControl={false}
@@ -149,6 +157,9 @@ const SinglePantry: FC = () => {
       </div>
       <S.PantryContainer>
         <Container>
+          <S.Action>
+            <FavoriteBtn id={id} />
+          </S.Action>
           <S.Info>
             <h1>{activePantry.name}</h1>
             {details.map((detail) => (
@@ -159,15 +170,20 @@ const SinglePantry: FC = () => {
             ))}
             <br />
             <p>Want to update/edit this pantry?</p>
-
             <Button
               onClick={() => push("/edit-pantry")}
               text="Request a change"
             />
+            <S.Comments>
+              <FacebookProvider appId={FB_APP_ID}>
+                <Comments width="100%" href={`${APP_URL}/#/map/${id}`} />
+              </FacebookProvider>
+            </S.Comments>
           </S.Info>
+          <Footer />
         </Container>
       </S.PantryContainer>
-    </S.Wrapper>
+    </>
   );
 };
 

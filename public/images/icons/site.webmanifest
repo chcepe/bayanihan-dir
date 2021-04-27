@@ -1,8 +1,8 @@
 {
-  "short_name": "bayanihan-dir",
-  "name": "bayanihan-di",
-  "scope": "/",
-  "start_url": "/",
+  "short_name": "Bayanihandir",
+  "name": "Bayanihanbdir",
+  "scope": "/bayanihan-dir",
+  "start_url": "/bayanihan-dir",
   "orientation": "portrait",
   "icons": [
     {
@@ -17,6 +17,6 @@
     }
   ],
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#262626",
+  "background_color": "#262626"
 }

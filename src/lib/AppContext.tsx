@@ -5,7 +5,7 @@ import { Pantry } from "utils/types";
 import { GOOGLE_SHEET } from "utils/constants";
 import { formatPantries } from "utils/formatters";
 import { useLocalStorage } from "utils/hooks";
-import { unique } from "utils/functions";
+import { pantriesWithCoords, unique } from "utils/functions";
 
 interface Props {
   pantries: Pantry[];
@@ -56,7 +56,7 @@ const AppContextProvider: FC = ({ children }) => {
       .get(GOOGLE_SHEET)
       .then((res) => {
         const data = res.data.feed.entry;
-        setPantries(formatPantries(data));
+        setPantries(pantriesWithCoords(formatPantries(data)));
       })
       .finally(() => {
         setLoadingPantries(false);

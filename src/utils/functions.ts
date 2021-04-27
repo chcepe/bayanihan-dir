@@ -26,3 +26,13 @@ export const hash = (str: string, seed = 0) => {
 
 export const unique = (array: any[]) =>
   array.filter((v, i, a) => a.indexOf(v) === i);
+
+export const latlong = (lat: string, lng: string) => {
+  const isLat = isFinite(Number(lat)) && Math.abs(Number(lat)) <= 90;
+  const isLong = isFinite(Number(lat)) && Math.abs(Number(lat)) <= 180;
+
+  return isLat && isLong;
+};
+
+export const pantriesWithCoords = (pantries: Pantry[]) =>
+  pantries.filter(({ coords }) => latlong(coords.lat, coords.long));
